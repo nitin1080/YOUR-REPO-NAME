@@ -1,6 +1,6 @@
 # High-Performance Matrix Multiplication (C++17)
 
-Naive, cache-blocked and multithreaded N×N `double` matrix multiplication, written from scratch (no external libraries). Includes a cache simulator for memory-access analysis, a deliberate false-sharing kernel, profiling hooks (`perf`/`gprof`) and a reproducible benchmark script.
+Naive, cache-blocked and multithreaded N×N `double` matrix multiplication, written from scratch (no external libraries). Includes a cache simulator for memory-access analysis, a deliberate false-sharing kernel, and a reproducible benchmark script.
 
 ## Structure
 ```
