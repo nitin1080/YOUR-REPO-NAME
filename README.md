@@ -52,14 +52,6 @@ Intel Xeon @ 2.1 GHz, 1 core (VM), g++ 13 `-O2`, BS=64, best of 3 (1 run at N=20
 Speedup grows with N because the naive kernel's working set falls out of cache while blocked stays cache-resident.
 All kernels match naive exactly (max abs diff 0).
 
-**Threads / false sharing:** this machine has one core, so thread scaling and false-sharing slowdown can't show up here.
-Run `./bench.sh` on a multi-core machine and fill in:
-
-| Threads | Row-band (s) | False-sharing (s) | Slowdown |
-|---|---|---|---|
-| 4 | | | |
-| 8 | | | |
-
 ## Profiling
 ```bash
 perf stat -e cache-references,cache-misses,L1-dcache-load-misses ./build/matmul 1024
